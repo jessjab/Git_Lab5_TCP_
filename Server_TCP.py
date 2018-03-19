@@ -24,7 +24,7 @@ print "You entered: ", TCP_PORT_NO_int, OUTPUT_FILE
 S = socket.socket()
 TCP_HOST_NAME = socket.gethostname()
 SERVER_IP_ADDRESS = socket.gethostbyname(TCP_HOST_NAME)
-SERVER_IP_ADDRESS = '127.0.0.1'
+#SERVER_IP_ADDRESS = '127.0.0.1'
 
     
     
