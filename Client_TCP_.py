@@ -55,7 +55,9 @@ while FILE:
     print READ_FILE
     if i == NO_OF_CHUNKS:
         READ_FILE = FILE.read(REMAINDER)
-        #print "READ_FILE:",READ_FILE 
+        #print "READ_FILE:",READ_FILE
+        DATABACK = s.recv(BYTE_CHUNKS)
+        print DATABACK
         s.close()
         break
     
