@@ -53,6 +53,7 @@ SERVER_IP_ADDRESS = '127.0.0.1'
 #Receiving data from Client_________________________________________________________________________________________________
 BUFFER_SIZE = 1024  
 ALL_DATA =""
+MESSAGE = "ACK"
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.bind((SERVER_IP_ADDRESS, TCP_PORT_NO_int))
@@ -63,6 +64,7 @@ while True:
     print 'Connection address:', addr
     while 1:
          data = conn.recv(BUFFER_SIZE)
+         conn.send(MESSAGE)
          if not data: break
          print 'received %s bytes from %s' % (len(data), addr)
          print '                                             '
